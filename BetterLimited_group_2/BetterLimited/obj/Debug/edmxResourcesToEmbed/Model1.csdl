@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="betterlimitedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tel" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="salesorders" Relationship="Self.FKSalesOrder557619" FromRole="customer" ToRole="salesorder" />
+    <NavigationProperty Name="salesreceipts" Relationship="Self.FKSalesRecei494615" FromRole="customer" ToRole="salesreceipt" />
+  </EntityType>
+  <EntityType Name="deliveryorder">
+    <Key>
+      <PropertyRef Name="DeliveryID" />
+    </Key>
+    <Property Name="DeliveryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesOrderID" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryDate" Type="DateTime" Nullable="false" />
+    <Property Name="DeliveryTime" Type="Time" Nullable="false" />
+    <Property Name="DeliveryStatus" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WorkmanID" Type="Int32" />
+    <NavigationProperty Name="staff" Relationship="Self.FK_WorkmanID_1" FromRole="deliveryorder" ToRole="staff" />
+    <NavigationProperty Name="salesorder" Relationship="Self.FKDeliveryNo330361" FromRole="deliveryorder" ToRole="salesorder" />
+  </EntityType>
+  <EntityType Name="goodreturnnote">
+    <Key>
+      <PropertyRef Name="ReturnNoteID" />
+    </Key>
+    <Property Name="ReturnNoteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesOrderID" Type="Int32" Nullable="false" />
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Time" Type="Time" Nullable="false" />
+    <NavigationProperty Name="goodreturnnote_item" Relationship="Self.FKGoodReturn395895" FromRole="goodreturnnote" ToRole="goodreturnnote_item" />
+    <NavigationProperty Name="salesorder" Relationship="Self.FKGoodReturn63513" FromRole="goodreturnnote" ToRole="salesorder" />
+    <NavigationProperty Name="staff" Relationship="Self.goodreturnnote_ibfk_1" FromRole="goodreturnnote" ToRole="staff" />
+    <NavigationProperty Name="store" Relationship="Self.goodreturnnote_ibfk_2" FromRole="goodreturnnote" ToRole="store" />
+  </EntityType>
+  <EntityType Name="goodreturnnote_item">
+    <Key>
+      <PropertyRef Name="ReturnNoteID" />
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ReturnNoteID" Type="Int32" Nullable="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" />
+    <NavigationProperty Name="goodreturnnote" Relationship="Self.FKGoodReturn395895" FromRole="goodreturnnote_item" ToRole="goodreturnnote" />
+    <NavigationProperty Name="item" Relationship="Self.FKGoodReturn748003" FromRole="goodreturnnote_item" ToRole="item" />
+  </EntityType>
+  <EntityType Name="goodsreceivednote">
+    <Key>
+      <PropertyRef Name="ReceivedID" />
+      <PropertyRef Name="PurchaseOrderID" />
+    </Key>
+    <Property Name="ReceivedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchaseOrderID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="InboundDate" Type="DateTime" Nullable="false" />
+    <Property Name="InboundTime" Type="Time" Nullable="false" />
+    <NavigationProperty Name="purchaseorder" Relationship="Self.FKGoodsRecei36177" FromRole="goodsreceivednote" ToRole="purchaseorder" />
+    <NavigationProperty Name="supplier" Relationship="Self.FKGoodsRecei913086" FromRole="goodsreceivednote" ToRole="supplier" />
+  </EntityType>
+  <EntityType Name="installationorder">
+    <Key>
+      <PropertyRef Name="InstallationID" />
+    </Key>
+    <Property Name="InstallationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesOrderID" Type="Int32" Nullable="false" />
+    <Property Name="InstallationDate" Type="DateTime" Nullable="false" />
+    <Property Name="InstallationTime" Type="Time" Nullable="false" />
+    <Property Name="InstallationStatus" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+    <Property Name="WorkmanID" Type="Int32" />
+    <NavigationProperty Name="staff" Relationship="Self.FK_WorkmanID_2" FromRole="installationorder" ToRole="staff" />
+    <NavigationProperty Name="salesorder" Relationship="Self.FKInstallati300044" FromRole="installationorder" ToRole="salesorder" />
+  </EntityType>
+  <EntityType Name="inventorystocklevel">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="LowLevelQty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="item" Relationship="Self.FK_itemID" FromRole="inventorystocklevel" ToRole="item" />
+  </EntityType>
+  <EntityType Name="item">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemCat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemImg" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="SalePrice" Type="Int32" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierPrice" Type="Int32" Nullable="false" />
+    <Property Name="WarrantyMonth" Type="Int32" Nullable="false" />
+    <Property Name="AllowDelivery" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="goodreturnnote_item" Relationship="Self.FKGoodReturn748003" FromRole="item" ToRole="goodreturnnote_item" />
+    <NavigationProperty Name="inventorystocklevel" Relationship="Self.FK_itemID" FromRole="item" ToRole="inventorystocklevel" />
+    <NavigationProperty Name="retailstocklevels" Relationship="Self.FK_itemIDrs" FromRole="item" ToRole="retailstocklevel" />
+    <NavigationProperty Name="supplier" Relationship="Self.FKItem506810" FromRole="item" ToRole="supplier" />
+    <NavigationProperty Name="purchaseorder_item" Relationship="Self.FKPurchaseOr100230" FromRole="item" ToRole="purchaseorder_item" />
+    <NavigationProperty Name="salesorder_item" Relationship="Self.FKSalesOrder804327" FromRole="item" ToRole="salesorder_item" />
+    <NavigationProperty Name="restockrequest_item" Relationship="Self.restockrequest_item_ibfk_1" FromRole="item" ToRole="restockrequest_item" />
+  </EntityType>
+  <EntityType Name="purchaseorder">
+    <Key>
+      <PropertyRef Name="PurchaseOrderID" />
+    </Key>
+    <Property Name="PurchaseOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" />
+    <Property Name="OrderTime" Type="Time" Nullable="false" />
+    <Property Name="OrderStatus" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="goodsreceivednotes" Relationship="Self.FKGoodsRecei36177" FromRole="purchaseorder" ToRole="goodsreceivednote" />
+    <NavigationProperty Name="staff" Relationship="Self.FK_StaffID1" FromRole="purchaseorder" ToRole="staff" />
+    <NavigationProperty Name="purchaseorder_item" Relationship="Self.FKPurchaseOr444232" FromRole="purchaseorder" ToRole="purchaseorder_item" />
+    <NavigationProperty Name="supplier" Relationship="Self.FKPurchaseOr510102" FromRole="purchaseorder" ToRole="supplier" />
+  </EntityType>
+  <EntityType Name="purchaseorder_item">
+    <Key>
+      <PropertyRef Name="PurchaseOrderID" />
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="PurchaseOrderID" Type="Int32" Nullable="false" />
+    <Property Name="ReorderRequestID" Type="Int32" Nullable="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="item" Relationship="Self.FKPurchaseOr100230" FromRole="purchaseorder_item" ToRole="item" />
+    <NavigationProperty Name="purchaseorder" Relationship="Self.FKPurchaseOr444232" FromRole="purchaseorder_item" ToRole="purchaseorder" />
+    <NavigationProperty Name="reorderrequest" Relationship="Self.ReorderRequestID_FK" FromRole="purchaseorder_item" ToRole="reorderrequest" />
+  </EntityType>
+  <EntityType Name="reorderrequest">
+    <Key>
+      <PropertyRef Name="ReorderRequestID" />
+    </Key>
+    <Property Name="ReorderRequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="RequestDate" Type="DateTime" Nullable="false" />
+    <Property Name="RequestTime" Type="Time" Nullable="false" />
+    <Property Name="RequestStatus" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="purchaseorder_item" Relationship="Self.ReorderRequestID_FK" FromRole="reorderrequest" ToRole="purchaseorder_item" />
+    <NavigationProperty Name="reorderrequest_item" Relationship="Self.FK_ReOrderRequestID" FromRole="reorderrequest" ToRole="reorderrequest_item" />
+    <NavigationProperty Name="staff" Relationship="Self.FK_StaffID" FromRole="reorderrequest" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="reorderrequest_item">
+    <Key>
+      <PropertyRef Name="ItemID" />
+      <PropertyRef Name="ReorderRequestID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="ReorderRequestID" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="reorderrequest" Relationship="Self.FK_ReOrderRequestID" FromRole="reorderrequest_item" ToRole="reorderrequest" />
+  </EntityType>
+  <EntityType Name="restockrequest">
+    <Key>
+      <PropertyRef Name="RestockRequestID" />
+    </Key>
+    <Property Name="RestockRequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="RequestDate" Type="DateTime" Nullable="false" />
+    <Property Name="RequestTime" Type="Time" Nullable="false" />
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="store" Relationship="Self.FK_storeID_1" FromRole="restockrequest" ToRole="store" />
+    <NavigationProperty Name="staff" Relationship="Self.restockrequest_ibfk_1" FromRole="restockrequest" ToRole="staff" />
+    <NavigationProperty Name="restockrequest_item" Relationship="Self.restockrequest_item_ibfk_2" FromRole="restockrequest" ToRole="restockrequest_item" />
+  </EntityType>
+  <EntityType Name="restockrequest_item">
+    <Key>
+      <PropertyRef Name="RestockRequestID" />
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="RestockRequestID" Type="Int32" Nullable="false" />
+    <Property Name="itemID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="item" Relationship="Self.restockrequest_item_ibfk_1" FromRole="restockrequest_item" ToRole="item" />
+    <NavigationProperty Name="restockrequest" Relationship="Self.restockrequest_item_ibfk_2" FromRole="restockrequest_item" ToRole="restockrequest" />
+  </EntityType>
+  <EntityType Name="retailstocklevel">
+    <Key>
+      <PropertyRef Name="itemID" />
+      <PropertyRef Name="storeID" />
+    </Key>
+    <Property Name="itemID" Type="Int32" Nullable="false" />
+    <Property Name="storeID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="LowLevelQty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="item" Relationship="Self.FK_itemIDrs" FromRole="retailstocklevel" ToRole="item" />
+    <NavigationProperty Name="store" Relationship="Self.FK_storeID" FromRole="retailstocklevel" ToRole="store" />
+  </EntityType>
+  <EntityType Name="salesorder">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="PaymentStatus" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+    <Property Name="PaidAmt" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Time" Type="Time" Nullable="false" />
+    <Property Name="ExpDate" Type="DateTime" />
+    <Property Name="CustomerID" Type="Int32" />
+    <NavigationProperty Name="customer" Relationship="Self.FKSalesOrder557619" FromRole="salesorder" ToRole="customer" />
+    <NavigationProperty Name="deliveryorders" Relationship="Self.FKDeliveryNo330361" FromRole="salesorder" ToRole="deliveryorder" />
+    <NavigationProperty Name="goodreturnnotes" Relationship="Self.FKGoodReturn63513" FromRole="salesorder" ToRole="goodreturnnote" />
+    <NavigationProperty Name="installationorders" Relationship="Self.FKInstallati300044" FromRole="salesorder" ToRole="installationorder" />
+    <NavigationProperty Name="staff" Relationship="Self.FKSalesOrder426975" FromRole="salesorder" ToRole="staff" />
+    <NavigationProperty Name="store" Relationship="Self.FKSalesOrder841473" FromRole="salesorder" ToRole="store" />
+    <NavigationProperty Name="salesorder_item" Relationship="Self.FKSalesOrder929714" FromRole="salesorder" ToRole="salesorder_item" />
+    <NavigationProperty Name="salesreceipts" Relationship="Self.FKSalesRecei652713" FromRole="salesorder" ToRole="salesreceipt" />
+  </EntityType>
+  <EntityType Name="salesorder_item">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="Int32" Nullable="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="SalePrice" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="WarrantyMouth" Type="Int32" />
+    <Property Name="SerialNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="item" Relationship="Self.FKSalesOrder804327" FromRole="salesorder_item" ToRole="item" />
+    <NavigationProperty Name="salesorder" Relationship="Self.FKSalesOrder929714" FromRole="salesorder_item" ToRole="salesorder" />
+  </EntityType>
+  <EntityType Name="salesreceipt">
+    <Key>
+      <PropertyRef Name="ReceiptID" />
+    </Key>
+    <Property Name="ReceiptID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesOrderID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="PaymentType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="customer" Relationship="Self.FKSalesRecei494615" FromRole="salesreceipt" ToRole="customer" />
+    <NavigationProperty Name="salesorder" Relationship="Self.FKSalesRecei652713" FromRole="salesreceipt" ToRole="salesorder" />
+  </EntityType>
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaffName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" />
+    <Property Name="Tel" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Position" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Depart" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Salary" Type="Int32" />
+    <Property Name="storeID" Type="Int32" />
+    <NavigationProperty Name="deliveryorders" Relationship="Self.FK_WorkmanID_1" FromRole="staff" ToRole="deliveryorder" />
+    <NavigationProperty Name="goodreturnnotes" Relationship="Self.goodreturnnote_ibfk_1" FromRole="staff" ToRole="goodreturnnote" />
+    <NavigationProperty Name="installationorders" Relationship="Self.FK_WorkmanID_2" FromRole="staff" ToRole="installationorder" />
+    <NavigationProperty Name="purchaseorders" Relationship="Self.FK_StaffID1" FromRole="staff" ToRole="purchaseorder" />
+    <NavigationProperty Name="reorderrequests" Relationship="Self.FK_StaffID" FromRole="staff" ToRole="reorderrequest" />
+    <NavigationProperty Name="restockrequests" Relationship="Self.restockrequest_ibfk_1" FromRole="staff" ToRole="restockrequest" />
+    <NavigationProperty Name="salesorders" Relationship="Self.FKSalesOrder426975" FromRole="staff" ToRole="salesorder" />
+    <NavigationProperty Name="stores" Relationship="Self.FKStore384954" FromRole="staff" ToRole="store" />
+    <NavigationProperty Name="useraccounts" Relationship="Self.FKUserAccoun919948" FromRole="staff" ToRole="useraccount" />
+  </EntityType>
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreName" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tel" Type="Int32" Nullable="false" />
+    <Property Name="ManagerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="goodreturnnotes" Relationship="Self.goodreturnnote_ibfk_2" FromRole="store" ToRole="goodreturnnote" />
+    <NavigationProperty Name="restockrequests" Relationship="Self.FK_storeID_1" FromRole="store" ToRole="restockrequest" />
+    <NavigationProperty Name="retailstocklevels" Relationship="Self.FK_storeID" FromRole="store" ToRole="retailstocklevel" />
+    <NavigationProperty Name="salesorders" Relationship="Self.FKSalesOrder841473" FromRole="store" ToRole="salesorder" />
+    <NavigationProperty Name="staff" Relationship="Self.FKStore384954" FromRole="store" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tel" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="goodsreceivednotes" Relationship="Self.FKGoodsRecei913086" FromRole="supplier" ToRole="goodsreceivednote" />
+    <NavigationProperty Name="items" Relationship="Self.FKItem506810" FromRole="supplier" ToRole="item" />
+    <NavigationProperty Name="purchaseorders" Relationship="Self.FKPurchaseOr510102" FromRole="supplier" ToRole="purchaseorder" />
+  </EntityType>
+  <EntityType Name="useraccount">
+    <Key>
+      <PropertyRef Name="UserAccountID" />
+    </Key>
+    <Property Name="UserAccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreateDateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDateTime" Type="DateTime" />
+    <NavigationProperty Name="staff" Relationship="Self.FKUserAccoun919948" FromRole="useraccount" ToRole="staff" />
+  </EntityType>
+  <Association Name="FKSalesOrder557619">
+    <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSalesRecei494615">
+    <End Role="customer" Type="Self.customer" Multiplicity="1" />
+    <End Role="salesreceipt" Type="Self.salesreceipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="salesreceipt">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkmanID_1">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="WorkmanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDeliveryNo330361">
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGoodReturn395895">
+    <End Role="goodreturnnote" Type="Self.goodreturnnote" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="goodreturnnote_item" Type="Self.goodreturnnote_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="goodreturnnote">
+        <PropertyRef Name="ReturnNoteID" />
+      </Principal>
+      <Dependent Role="goodreturnnote_item">
+        <PropertyRef Name="ReturnNoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGoodReturn63513">
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="goodreturnnote" Type="Self.goodreturnnote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="goodreturnnote">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="goodreturnnote_ibfk_1">
+    <End Role="staff" Type="Self.staff" Multiplicity="1" />
+    <End Role="goodreturnnote" Type="Self.goodreturnnote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="goodreturnnote">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="goodreturnnote_ibfk_2">
+    <End Role="store" Type="Self.store" Multiplicity="1" />
+    <End Role="goodreturnnote" Type="Self.goodreturnnote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="store">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="goodreturnnote">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGoodReturn748003">
+    <End Role="item" Type="Self.item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="goodreturnnote_item" Type="Self.goodreturnnote_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="item">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="goodreturnnote_item">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGoodsRecei36177">
+    <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="1" />
+    <End Role="goodsreceivednote" Type="Self.goodsreceivednote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchaseorder">
+        <PropertyRef Name="PurchaseOrderID" />
+      </Principal>
+      <Dependent Role="goodsreceivednote">
+        <PropertyRef Name="PurchaseOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGoodsRecei913086">
+    <End Role="supplier" Type="Self.supplier" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="goodsreceivednote" Type="Self.goodsreceivednote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="goodsreceivednote">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkmanID_2">
+    <End Role="staff" Type="Self.staff" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="WorkmanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstallati300044">
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_itemID">
+    <End Role="item" Type="Self.item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="inventorystocklevel" Type="Self.inventorystocklevel" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="item">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="inventorystocklevel">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_itemIDrs">
+    <End Role="item" Type="Self.item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="retailstocklevel" Type="Self.retailstocklevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="item">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="retailstocklevel">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKItem506810">
+    <End Role="supplier" Type="Self.supplier" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="item" Type="Self.item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="item">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPurchaseOr100230">
+    <End Role="item" Type="Self.item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseorder_item" Type="Self.purchaseorder_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="item">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="purchaseorder_item">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSalesOrder804327">
+    <End Role="item" Type="Self.item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="salesorder_item" Type="Self.salesorder_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="item">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="salesorder_item">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="restockrequest_item_ibfk_1">
+    <End Role="item" Type="Self.item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="restockrequest_item" Type="Self.restockrequest_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="item">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="restockrequest_item">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StaffID1">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="purchaseorder">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPurchaseOr444232">
+    <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseorder_item" Type="Self.purchaseorder_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchaseorder">
+        <PropertyRef Name="PurchaseOrderID" />
+      </Principal>
+      <Dependent Role="purchaseorder_item">
+        <PropertyRef Name="PurchaseOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPurchaseOr510102">
+    <End Role="supplier" Type="Self.supplier" Multiplicity="1" />
+    <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="purchaseorder">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ReorderRequestID_FK">
+    <End Role="reorderrequest" Type="Self.reorderrequest" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseorder_item" Type="Self.purchaseorder_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="reorderrequest">
+        <PropertyRef Name="ReorderRequestID" />
+      </Principal>
+      <Dependent Role="purchaseorder_item">
+        <PropertyRef Name="ReorderRequestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReOrderRequestID">
+    <End Role="reorderrequest" Type="Self.reorderrequest" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorderrequest_item" Type="Self.reorderrequest_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="reorderrequest">
+        <PropertyRef Name="ReorderRequestID" />
+      </Principal>
+      <Dependent Role="reorderrequest_item">
+        <PropertyRef Name="ReorderRequestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StaffID">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorderrequest" Type="Self.reorderrequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="reorderrequest">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeID_1">
+    <End Role="store" Type="Self.store" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="restockrequest" Type="Self.restockrequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="store">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="restockrequest">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="restockrequest_ibfk_1">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="restockrequest" Type="Self.restockrequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="restockrequest">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="restockrequest_item_ibfk_2">
+    <End Role="restockrequest" Type="Self.restockrequest" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="restockrequest_item" Type="Self.restockrequest_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restockrequest">
+        <PropertyRef Name="RestockRequestID" />
+      </Principal>
+      <Dependent Role="restockrequest_item">
+        <PropertyRef Name="RestockRequestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeID">
+    <End Role="store" Type="Self.store" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="retailstocklevel" Type="Self.retailstocklevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="store">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="retailstocklevel">
+        <PropertyRef Name="storeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSalesOrder426975">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSalesOrder841473">
+    <End Role="store" Type="Self.store" Multiplicity="1" />
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="store">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSalesOrder929714">
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="salesorder_item" Type="Self.salesorder_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="salesorder_item">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSalesRecei652713">
+    <End Role="salesorder" Type="Self.salesorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="salesreceipt" Type="Self.salesreceipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="salesreceipt">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKStore384954">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="store" Type="Self.store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="store">
+        <PropertyRef Name="ManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUserAccoun919948">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="useraccount" Type="Self.useraccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="useraccount">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="deliveryorders" EntityType="Self.deliveryorder" />
+    <EntitySet Name="goodreturnnotes" EntityType="Self.goodreturnnote" />
+    <EntitySet Name="goodreturnnote_item" EntityType="Self.goodreturnnote_item" />
+    <EntitySet Name="goodsreceivednotes" EntityType="Self.goodsreceivednote" />
+    <EntitySet Name="installationorders" EntityType="Self.installationorder" />
+    <EntitySet Name="inventorystocklevels" EntityType="Self.inventorystocklevel" />
+    <EntitySet Name="items" EntityType="Self.item" />
+    <EntitySet Name="purchaseorders" EntityType="Self.purchaseorder" />
+    <EntitySet Name="purchaseorder_item" EntityType="Self.purchaseorder_item" />
+    <EntitySet Name="reorderrequests" EntityType="Self.reorderrequest" />
+    <EntitySet Name="reorderrequest_item" EntityType="Self.reorderrequest_item" />
+    <EntitySet Name="restockrequests" EntityType="Self.restockrequest" />
+    <EntitySet Name="restockrequest_item" EntityType="Self.restockrequest_item" />
+    <EntitySet Name="retailstocklevels" EntityType="Self.retailstocklevel" />
+    <EntitySet Name="salesorders" EntityType="Self.salesorder" />
+    <EntitySet Name="salesorder_item" EntityType="Self.salesorder_item" />
+    <EntitySet Name="salesreceipts" EntityType="Self.salesreceipt" />
+    <EntitySet Name="staffs" EntityType="Self.staff" />
+    <EntitySet Name="stores" EntityType="Self.store" />
+    <EntitySet Name="suppliers" EntityType="Self.supplier" />
+    <EntitySet Name="useraccounts" EntityType="Self.useraccount" />
+    <AssociationSet Name="FKSalesOrder557619" Association="Self.FKSalesOrder557619">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="salesorder" EntitySet="salesorders" />
+    </AssociationSet>
+    <AssociationSet Name="FKSalesRecei494615" Association="Self.FKSalesRecei494615">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="salesreceipt" EntitySet="salesreceipts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkmanID_1" Association="Self.FK_WorkmanID_1">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="FKDeliveryNo330361" Association="Self.FKDeliveryNo330361">
+      <End Role="salesorder" EntitySet="salesorders" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="FKGoodReturn395895" Association="Self.FKGoodReturn395895">
+      <End Role="goodreturnnote" EntitySet="goodreturnnotes" />
+      <End Role="goodreturnnote_item" EntitySet="goodreturnnote_item" />
+    </AssociationSet>
+    <AssociationSet Name="FKGoodReturn63513" Association="Self.FKGoodReturn63513">
+      <End Role="salesorder" EntitySet="salesorders" />
+      <End Role="goodreturnnote" EntitySet="goodreturnnotes" />
+    </AssociationSet>
+    <AssociationSet Name="goodreturnnote_ibfk_1" Association="Self.goodreturnnote_ibfk_1">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="goodreturnnote" EntitySet="goodreturnnotes" />
+    </AssociationSet>
+    <AssociationSet Name="goodreturnnote_ibfk_2" Association="Self.goodreturnnote_ibfk_2">
+      <End Role="store" EntitySet="stores" />
+      <End Role="goodreturnnote" EntitySet="goodreturnnotes" />
+    </AssociationSet>
+    <AssociationSet Name="FKGoodReturn748003" Association="Self.FKGoodReturn748003">
+      <End Role="item" EntitySet="items" />
+      <End Role="goodreturnnote_item" EntitySet="goodreturnnote_item" />
+    </AssociationSet>
+    <AssociationSet Name="FKGoodsRecei36177" Association="Self.FKGoodsRecei36177">
+      <End Role="purchaseorder" EntitySet="purchaseorders" />
+      <End Role="goodsreceivednote" EntitySet="goodsreceivednotes" />
+    </AssociationSet>
+    <AssociationSet Name="FKGoodsRecei913086" Association="Self.FKGoodsRecei913086">
+      <End Role="supplier" EntitySet="suppliers" />
+      <End Role="goodsreceivednote" EntitySet="goodsreceivednotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkmanID_2" Association="Self.FK_WorkmanID_2">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstallati300044" Association="Self.FKInstallati300044">
+      <End Role="salesorder" EntitySet="salesorders" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_itemID" Association="Self.FK_itemID">
+      <End Role="item" EntitySet="items" />
+      <End Role="inventorystocklevel" EntitySet="inventorystocklevels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_itemIDrs" Association="Self.FK_itemIDrs">
+      <End Role="item" EntitySet="items" />
+      <End Role="retailstocklevel" EntitySet="retailstocklevels" />
+    </AssociationSet>
+    <AssociationSet Name="FKItem506810" Association="Self.FKItem506810">
+      <End Role="supplier" EntitySet="suppliers" />
+      <End Role="item" EntitySet="items" />
+    </AssociationSet>
+    <AssociationSet Name="FKPurchaseOr100230" Association="Self.FKPurchaseOr100230">
+      <End Role="item" EntitySet="items" />
+      <End Role="purchaseorder_item" EntitySet="purchaseorder_item" />
+    </AssociationSet>
+    <AssociationSet Name="FKSalesOrder804327" Association="Self.FKSalesOrder804327">
+      <End Role="item" EntitySet="items" />
+      <End Role="salesorder_item" EntitySet="salesorder_item" />
+    </AssociationSet>
+    <AssociationSet Name="restockrequest_item_ibfk_1" Association="Self.restockrequest_item_ibfk_1">
+      <End Role="item" EntitySet="items" />
+      <End Role="restockrequest_item" EntitySet="restockrequest_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StaffID1" Association="Self.FK_StaffID1">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="purchaseorder" EntitySet="purchaseorders" />
+    </AssociationSet>
+    <AssociationSet Name="FKPurchaseOr444232" Association="Self.FKPurchaseOr444232">
+      <End Role="purchaseorder" EntitySet="purchaseorders" />
+      <End Role="purchaseorder_item" EntitySet="purchaseorder_item" />
+    </AssociationSet>
+    <AssociationSet Name="FKPurchaseOr510102" Association="Self.FKPurchaseOr510102">
+      <End Role="supplier" EntitySet="suppliers" />
+      <End Role="purchaseorder" EntitySet="purchaseorders" />
+    </AssociationSet>
+    <AssociationSet Name="ReorderRequestID_FK" Association="Self.ReorderRequestID_FK">
+      <End Role="reorderrequest" EntitySet="reorderrequests" />
+      <End Role="purchaseorder_item" EntitySet="purchaseorder_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReOrderRequestID" Association="Self.FK_ReOrderRequestID">
+      <End Role="reorderrequest" EntitySet="reorderrequests" />
+      <End Role="reorderrequest_item" EntitySet="reorderrequest_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StaffID" Association="Self.FK_StaffID">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="reorderrequest" EntitySet="reorderrequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeID_1" Association="Self.FK_storeID_1">
+      <End Role="store" EntitySet="stores" />
+      <End Role="restockrequest" EntitySet="restockrequests" />
+    </AssociationSet>
+    <AssociationSet Name="restockrequest_ibfk_1" Association="Self.restockrequest_ibfk_1">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="restockrequest" EntitySet="restockrequests" />
+    </AssociationSet>
+    <AssociationSet Name="restockrequest_item_ibfk_2" Association="Self.restockrequest_item_ibfk_2">
+      <End Role="restockrequest" EntitySet="restockrequests" />
+      <End Role="restockrequest_item" EntitySet="restockrequest_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeID" Association="Self.FK_storeID">
+      <End Role="store" EntitySet="stores" />
+      <End Role="retailstocklevel" EntitySet="retailstocklevels" />
+    </AssociationSet>
+    <AssociationSet Name="FKSalesOrder426975" Association="Self.FKSalesOrder426975">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="salesorder" EntitySet="salesorders" />
+    </AssociationSet>
+    <AssociationSet Name="FKSalesOrder841473" Association="Self.FKSalesOrder841473">
+      <End Role="store" EntitySet="stores" />
+      <End Role="salesorder" EntitySet="salesorders" />
+    </AssociationSet>
+    <AssociationSet Name="FKSalesOrder929714" Association="Self.FKSalesOrder929714">
+      <End Role="salesorder" EntitySet="salesorders" />
+      <End Role="salesorder_item" EntitySet="salesorder_item" />
+    </AssociationSet>
+    <AssociationSet Name="FKSalesRecei652713" Association="Self.FKSalesRecei652713">
+      <End Role="salesorder" EntitySet="salesorders" />
+      <End Role="salesreceipt" EntitySet="salesreceipts" />
+    </AssociationSet>
+    <AssociationSet Name="FKStore384954" Association="Self.FKStore384954">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="store" EntitySet="stores" />
+    </AssociationSet>
+    <AssociationSet Name="FKUserAccoun919948" Association="Self.FKUserAccoun919948">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="useraccount" EntitySet="useraccounts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

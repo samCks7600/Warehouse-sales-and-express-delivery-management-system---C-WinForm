@@ -1,0 +1,369 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BetterLimited.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LoginMsgBoxEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Incorrect user name or password, please try again.</Value>
+    </Setting>
+    <Setting Name="LoginMsgBoxZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">用户名或密码错误，请再试一次。</Value>
+    </Setting>
+    <Setting Name="lblStaffIDWarningEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Staff ID should be numeric</Value>
+    </Setting>
+    <Setting Name="lblStaffIDWarningZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">员工编号应为数字</Value>
+    </Setting>
+    <Setting Name="errorMessageRequiredEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Staff ID is required.</Value>
+    </Setting>
+    <Setting Name="errorMessageRequiredZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入员工编号。</Value>
+    </Setting>
+    <Setting Name="errorMessageFiveEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Staff ID must be 5 digit.</Value>
+    </Setting>
+    <Setting Name="errorMessageFiveZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">员工编号必须是 5 位数字。</Value>
+    </Setting>
+    <Setting Name="errorMessageUsernameEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Username is required.</Value>
+    </Setting>
+    <Setting Name="errorMessageUsernameZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入用户名。</Value>
+    </Setting>
+    <Setting Name="errorMessageUsernameValidEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Usernames must be between 4 and 20 characters.</Value>
+    </Setting>
+    <Setting Name="errorMessageUsernameValidZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">用户名必须介于 4 到 20 个字符之间。</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please check your password strength.</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请检查您的密码强度。</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordRequiredEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password is required.</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordRequiredZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入密码。</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordValidEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password must be at least 8 characters long.</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordValidZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">密码长度必须至少为 8 个字符。</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordConfirmEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Confirm password is required.</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordConfirmZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入确认密码。</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordMatchEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Passwords do not match. Please try again.</Value>
+    </Setting>
+    <Setting Name="errorMessagePasswordMatchZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">密码不匹配。请再试一次。</Value>
+    </Setting>
+    <Setting Name="errorMessageEmailEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Email address is required.</Value>
+    </Setting>
+    <Setting Name="errorMessageEmailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入电子邮件地址。</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxFailEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sign up failed. Please sign up again.</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxFailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">注册失败。请重新注册。</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxStaffIDFailEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sign up failed. Incorrect staff ID.</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxStaffIDFailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">注册失败。员工编号不正确。</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxUsernameFailEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sign up failed. Username already exists.</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxEmailEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sign up successfully, please check your email.</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxEmailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">注册成功，请查电子收邮箱。</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxEmailTitleZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">欢迎</Value>
+    </Setting>
+    <Setting Name="CreateStaffFormMsgBoxFillZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">应填写所有信息。</Value>
+    </Setting>
+    <Setting Name="CreateStaffFormMsgBoxSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">成功创建员工。</Value>
+    </Setting>
+    <Setting Name="CreateStaffFormMsgBoxUnucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">创建员工失败。</Value>
+    </Setting>
+    <Setting Name="EditStaffUpdateZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">成功更新员工资料。</Value>
+    </Setting>
+    <Setting Name="EditStaffUpdateFailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">更新员工资料失败。</Value>
+    </Setting>
+    <Setting Name="ViewStaffDeleteZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">删除成功。</Value>
+    </Setting>
+    <Setting Name="ViewStaffDeleteFailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">删除失败。</Value>
+    </Setting>
+    <Setting Name="UpdateUserZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">成功更新帐户资料。</Value>
+    </Setting>
+    <Setting Name="UpdateUserFailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">更新帐户资料失败。</Value>
+    </Setting>
+    <Setting Name="DeliveryWorkerZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">该项目已被选取。</Value>
+    </Setting>
+    <Setting Name="DeliveryWorkerDeZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">已选择此交货单。</Value>
+    </Setting>
+    <Setting Name="SelectWorkmanZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请选择工人。</Value>
+    </Setting>
+    <Setting Name="SelectDOZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请选择交货单到安排清单。</Value>
+    </Setting>
+    <Setting Name="ArrangeSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">安排成功。</Value>
+    </Setting>
+    <Setting Name="ArrangeUnsucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">安排不成功。</Value>
+    </Setting>
+    <Setting Name="UpdateSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">更新成功。</Value>
+    </Setting>
+    <Setting Name="UpdateUnsucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">更新失败。</Value>
+    </Setting>
+    <Setting Name="SelectUpdateZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请选择您要更新的记录</Value>
+    </Setting>
+    <Setting Name="NotRecSupplierZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> 没收到。请与供应商联系。</Value>
+    </Setting>
+    <Setting Name="ClickRecDetailsZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">点击下面的收货说明以显示详细信息。</Value>
+    </Setting>
+    <Setting Name="SelectIOZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请选择安装单到安排清单。</Value>
+    </Setting>
+    <Setting Name="AddSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">添加成功。</Value>
+    </Setting>
+    <Setting Name="AddUnsucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">添加失败。</Value>
+    </Setting>
+    <Setting Name="label_SalesPriceZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入数字。</Value>
+    </Setting>
+    <Setting Name="SelectSupIDZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请选择供应商编号</Value>
+    </Setting>
+    <Setting Name="SelectDelZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请选择是否允许送货</Value>
+    </Setting>
+    <Setting Name="ItemNameZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入商品名称</Value>
+    </Setting>
+    <Setting Name="CategoryZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入类别</Value>
+    </Setting>
+    <Setting Name="DescZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入描述</Value>
+    </Setting>
+    <Setting Name="SaleZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入销售价格</Value>
+    </Setting>
+    <Setting Name="SupZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入供应商价格</Value>
+    </Setting>
+    <Setting Name="WarZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入保修月份</Value>
+    </Setting>
+    <Setting Name="InvalidWMZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无效保修月份</Value>
+    </Setting>
+    <Setting Name="ValidWMZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入有效保修月份</Value>
+    </Setting>
+    <Setting Name="ItemNZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">未插入项目。</Value>
+    </Setting>
+    <Setting Name="NoItemZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">未添加任何货品。</Value>
+    </Setting>
+    <Setting Name="AmountZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入付款金额。</Value>
+    </Setting>
+    <Setting Name="SAmountZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入足够的付款金额。</Value>
+    </Setting>
+    <Setting Name="PurchaseUnZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">购买不成功。</Value>
+    </Setting>
+    <Setting Name="POSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">采购订单成功。</Value>
+    </Setting>
+    <Setting Name="ReorderUnsZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">重新订购失败。</Value>
+    </Setting>
+    <Setting Name="SelectItemZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请选择货品。</Value>
+    </Setting>
+    <Setting Name="ClickReorderZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请单击待处理的重新订购请求。</Value>
+    </Setting>
+    <Setting Name="ClickRoDetailsZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">单击下面的重新订购请求以显示详细信息。</Value>
+    </Setting>
+    <Setting Name="AlreadyZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">此货品已被选中。</Value>
+    </Setting>
+    <Setting Name="SmallThanOneZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">此商品数量不能小于 1。</Value>
+    </Setting>
+    <Setting Name="QtyNullZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">数量不能为空。</Value>
+    </Setting>
+    <Setting Name="SubSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">提交成功。</Value>
+    </Setting>
+    <Setting Name="TWZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">荃湾</Value>
+    </Setting>
+    <Setting Name="KLBZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">九龙湾</Value>
+    </Setting>
+    <Setting Name="ItmQtyZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">此订单的商品数量不多。</Value>
+    </Setting>
+    <Setting Name="ReturnAmtZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">退货金额：$</Value>
+    </Setting>
+    <Setting Name="ReturnHvZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">您在退货单中有物品。</Value>
+    </Setting>
+    <Setting Name="ReturnNoSelZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">您还没有选择要放置退货单的商店。</Value>
+    </Setting>
+    <Setting Name="SupNameZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入供应商名称</Value>
+    </Setting>
+    <Setting Name="AddZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入地址</Value>
+    </Setting>
+    <Setting Name="TelZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入正确的电话号码</Value>
+    </Setting>
+    <Setting Name="errorMessageEmailValidEn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please enter a valid email address.
+For example abc@def.com</Value>
+    </Setting>
+    <Setting Name="errorMessageEmailValidZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">请输入有效的电子邮件地址。
+例如 abc@def.com</Value>
+    </Setting>
+    <Setting Name="SignupMsgBoxUsernameFailZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">注册失败。此用户名已存在。</Value>
+    </Setting>
+    <Setting Name="RecCreateSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">收货单创建成功。
+单号： </Value>
+    </Setting>
+    <Setting Name="MsgBoxFillZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">应填写所有信息
+项目图片除外）</Value>
+    </Setting>
+    <Setting Name="ReorderSucZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">重新订购请求成功。
+重新订购请求编号：</Value>
+    </Setting>
+    <Setting Name="LowLevelQtyZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">低级数量应该是数字。</Value>
+    </Setting>
+    <Setting Name="ReturnCSZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">在退货单中放置商品时，您不能选择其他销售订单。
+请清除退货说明，然后重试。</Value>
+    </Setting>
+    <Setting Name="LanZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">语言</Value>
+    </Setting>
+    <Setting Name="MonthZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">月份</Value>
+    </Setting>
+    <Setting Name="SocZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">销售订单数量</Value>
+    </Setting>
+    <Setting Name="SalesZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">销售</Value>
+    </Setting>
+    <Setting Name="AdminZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">行政</Value>
+    </Setting>
+    <Setting Name="CEOZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">首席执行官</Value>
+    </Setting>
+    <Setting Name="AccountZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">会计部</Value>
+    </Setting>
+    <Setting Name="InventoryZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">存货部</Value>
+    </Setting>
+    <Setting Name="PurchaseZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">采购部</Value>
+    </Setting>
+    <Setting Name="SalesDZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">销售部</Value>
+    </Setting>
+    <Setting Name="AMZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">会计经理</Value>
+    </Setting>
+    <Setting Name="ACZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">会计文员</Value>
+    </Setting>
+    <Setting Name="IMZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">库存经理</Value>
+    </Setting>
+    <Setting Name="ICZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">库存文员</Value>
+    </Setting>
+    <Setting Name="GICZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">进货文员</Value>
+    </Setting>
+    <Setting Name="DelZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">送货员</Value>
+    </Setting>
+    <Setting Name="PMZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">采购经理</Value>
+    </Setting>
+    <Setting Name="POZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">采购员</Value>
+    </Setting>
+    <Setting Name="SRZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">销售员</Value>
+    </Setting>
+    <Setting Name="SMZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">销售經理</Value>
+    </Setting>
+    <Setting Name="TSZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">技术支援部</Value>
+    </Setting>
+    <Setting Name="DetailsZh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">细节</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_SalesDepart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_SalesDepart.Text" xml:space="preserve">
+    <value>销售部门</value>
+  </data>
+  <data name="button_POSM_Sales.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_POSM_Sales.Text" xml:space="preserve">
+    <value> POS模块</value>
+  </data>
+  <data name="button_RSMM_Sales.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_RSMM_Sales.Text" xml:space="preserve">
+    <value>  零售库存管理模块</value>
+  </data>
+  <data name="button_RIM_Sales.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_RIM_Sales.Text" xml:space="preserve">
+    <value>  退货模块</value>
+  </data>
+  <data name="button_PMM_Sales.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_PMM_Sales.Text" xml:space="preserve">
+    <value>  产品管理模块</value>
+  </data>
+  <data name="button_AAM_Sales.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_AAM_Sales.Text" xml:space="preserve">
+    <value>  会计分析 模块</value>
+  </data>
+  <data name="button_InventoryDepart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_InventoryDepart.Text" xml:space="preserve">
+    <value>  库存部</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_ISMM_Inventory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_ISMM_Inventory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_ISMM_Inventory.Text" xml:space="preserve">
+    <value> 库存库存管理模块</value>
+  </data>
+  <data name="button_RSMM_Inventory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_RSMM_Inventory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_RSMM_Inventory.Text" xml:space="preserve">
+    <value> 零售库存管理模块</value>
+  </data>
+  <data name="button_DIM_Inventory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_DIM_Inventory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_DIM_Inventory.Text" xml:space="preserve">
+    <value> 送货安装模块</value>
+  </data>
+  <data name="button_RIM_Inventory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_RIM_Inventory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_RIM_Inventory.Text" xml:space="preserve">
+    <value>  退货模块</value>
+  </data>
+  <data name="button_AAM_Inventory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_AAM_Inventory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_AAM_Inventory.Text" xml:space="preserve">
+    <value>  会计分析模块</value>
+  </data>
+  <data name="button_PurchaseDepart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_PurchaseDepart.Text" xml:space="preserve">
+    <value>  采购部</value>
+  </data>
+  <data name="button_ISMM_Purchase.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_ISMM_Purchase.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_ISMM_Purchase.Text" xml:space="preserve">
+    <value> 库存库存管理模块</value>
+  </data>
+  <data name="button_AAM_Purchase.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_AAM_Purchase.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_AAM_Purchase.Text" xml:space="preserve">
+    <value> 会计分析模块</value>
+  </data>
+  <data name="button_PMM_Purchase.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_PMM_Purchase.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_PMM_Purchase.Text" xml:space="preserve">
+    <value> 产品管理模块</value>
+  </data>
+  <data name="button_AccountingDepart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_AccountingDepart.Text" xml:space="preserve">
+    <value> 会计部</value>
+  </data>
+  <data name="button_PMM_Accounting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_PMM_Accounting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_PMM_Accounting.Text" xml:space="preserve">
+    <value> 产品管理模块</value>
+  </data>
+  <data name="button_AAM_Accounting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_AAM_Accounting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_AAM_Accounting.Text" xml:space="preserve">
+    <value> 会计分析模块</value>
+  </data>
+  <data name="button_ISMM_Account.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_ISMM_Account.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_ISMM_Account.Text" xml:space="preserve">
+    <value> 库存管理模块</value>
+  </data>
+  <data name="button_RIM_Account.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_RIM_Account.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_RIM_Account.Text" xml:space="preserve">
+    <value> 退货模块</value>
+  </data>
+  <data name="button_TechnicalDepart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_TechnicalDepart.Text" xml:space="preserve">
+    <value> 技术支援</value>
+  </data>
+  <data name="button_DIM_Technical.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0EEKwzAMBED//9PtZagOXhKlNqGUzM3SSgKPR9vrgMhEOxIp6pHIRDsSKeqRyEQ7Einq21hb1LextqhH
+        Ip+M574vEvnxAx1mvxvusP++A56RyDVm/+BAh5FrzLYYWWNXJLLGrkhkjV2RyOPMGG99Kiz+U6+b+wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_DIM_Technical.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_DIM_Technical.Text" xml:space="preserve">
+    <value> 送货安装模块</value>
+  </data>
+  <data name="btnAdmin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAdmin.Text" xml:space="preserve">
+    <value> 管理员系统</value>
+  </data>
+  <data name="button_SalesPOS.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Technical_AAM_AnalysisReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Technical_AAM_AnalysisReport.Text" xml:space="preserve">
+    <value>分析报告</value>
+  </data>
+  <data name="button_Technical_DIM_WorkmenInfoRecord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Technical_DIM_WorkmenInfoRecord.Text" xml:space="preserve">
+    <value>安装任务清单</value>
+  </data>
+  <data name="button_Technical_DIM_InstallationWorkmanManagement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Technical_DIM_InstallationWorkmanManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 33</value>
+  </data>
+  <data name="button_Technical_DIM_InstallationWorkmanManagement.Text" xml:space="preserve">
+    <value>安装工人管理</value>
+  </data>
+  <data name="button_Technical_DIM_InstallationArrangement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Technical_DIM_InstallationArrangement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 2</value>
+  </data>
+  <data name="button_Technical_DIM_InstallationArrangement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 33</value>
+  </data>
+  <data name="button_Technical_DIM_InstallationArrangement.Text" xml:space="preserve">
+    <value>安装任务安排</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_Technical_DIM_dailyInstallation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_Technical_DIM_dailyInstallation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Technical_DIM_dailyInstallation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>632, 2</value>
+  </data>
+  <data name="button_Technical_DIM_dailyInstallation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="button_Technical_DIM_dailyInstallation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 33</value>
+  </data>
+  <data name="button_Technical_DIM_dailyInstallation.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="button_Technical_DIM_dailyInstallation.Text" xml:space="preserve">
+    <value>每日安装清单</value>
+  </data>
+  <data name="button_Inventory_DIM_DeliveryWorkmanManagement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_DIM_DeliveryWorkmanManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="button_Inventory_DIM_DeliveryWorkmanManagement.Text" xml:space="preserve">
+    <value>送货人员管理</value>
+  </data>
+  <data name="button_Inventory_DIM_DeliveryArrangement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_DIM_DeliveryArrangement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 39</value>
+  </data>
+  <data name="button_Inventory_DIM_DeliveryArrangement.Text" xml:space="preserve">
+    <value>送货清单安排</value>
+  </data>
+  <data name="btnDailyDelivery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDailyDelivery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 2</value>
+  </data>
+  <data name="btnDailyDelivery.Text" xml:space="preserve">
+    <value>每日交货</value>
+  </data>
+  <data name="button_Inventory_DIM_WorkmenInfoRecord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_DIM_WorkmenInfoRecord.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 39</value>
+  </data>
+  <data name="button_Inventory_DIM_WorkmenInfoRecord.Text" xml:space="preserve">
+    <value>送货任务清单</value>
+  </data>
+  <data name="flowLayoutPanel_Inventory_DIM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 2</value>
+  </data>
+  <data name="button_Inventory_AAM_AnalysisReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_AAM_AnalysisReport.Text" xml:space="preserve">
+    <value>分析报告</value>
+  </data>
+  <data name="button_Inventory_RIM_GoodsReturnedRecord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_RIM_GoodsReturnedRecord.Text" xml:space="preserve">
+    <value>退货记录</value>
+  </data>
+  <data name="button_Inventory_ISMM_InventoryStorckLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_ISMM_InventoryStorckLevel.Text" xml:space="preserve">
+    <value>库存水平</value>
+  </data>
+  <data name="button_Inventory_ISMM_ReorderRequest.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_ISMM_ReorderRequest.Text" xml:space="preserve">
+    <value>重新订购请求</value>
+  </data>
+  <data name="button_Inventory_ISMM_PurchaseOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_ISMM_PurchaseOrder.Text" xml:space="preserve">
+    <value>采购订单</value>
+  </data>
+  <data name="button_Inventory_ISMM_GoodsReceivedNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_ISMM_GoodsReceivedNote.Text" xml:space="preserve">
+    <value>收货单</value>
+  </data>
+  <data name="button_Inventory_ISMM_SupplierList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Inventory_ISMM_SupplierList.Text" xml:space="preserve">
+    <value>供应商名单</value>
+  </data>
+  <data name="button_RetailStockLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_RetailStockLevel.Text" xml:space="preserve">
+    <value>零售店库存水平</value>
+  </data>
+  <data name="button_Purchase_ISMM_ReorderRequest.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Purchase_ISMM_ReorderRequest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 33</value>
+  </data>
+  <data name="button_Purchase_ISMM_ReorderRequest.Text" xml:space="preserve">
+    <value>重新订购请求</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 2</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 33</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseOrder.Text" xml:space="preserve">
+    <value>采购订单</value>
+  </data>
+  <data name="button_Purchase_ISMM_GoodsReceivedNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Purchase_ISMM_GoodsReceivedNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 2</value>
+  </data>
+  <data name="button_Purchase_ISMM_GoodsReceivedNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 33</value>
+  </data>
+  <data name="button_Purchase_ISMM_GoodsReceivedNote.Text" xml:space="preserve">
+    <value>收货单</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseInvoice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseInvoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>662, 2</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseInvoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 33</value>
+  </data>
+  <data name="button_Purchase_ISMM_PurchaseInvoice.Text" xml:space="preserve">
+    <value>采购发票</value>
+  </data>
+  <data name="button_Purchase_PMM_PurchaseItemList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Purchase_PMM_PurchaseItemList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 33</value>
+  </data>
+  <data name="button_Purchase_PMM_PurchaseItemList.Text" xml:space="preserve">
+    <value>物品清单</value>
+  </data>
+  <data name="button_Purchase_PMM_SupplierList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Purchase_PMM_SupplierList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 2</value>
+  </data>
+  <data name="button_Purchase_PMM_SupplierList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 33</value>
+  </data>
+  <data name="button_Purchase_PMM_SupplierList.Text" xml:space="preserve">
+    <value>供应商名单</value>
+  </data>
+  <data name="button_Purchase_AAM_AnalysisReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Purchase_AAM_AnalysisReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 33</value>
+  </data>
+  <data name="button_Purchase_AAM_AnalysisReport.Text" xml:space="preserve">
+    <value>分析报告</value>
+  </data>
+  <data name="button_Account_ISMM_GoodsReceivedNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account_ISMM_GoodsReceivedNote.Text" xml:space="preserve">
+    <value>收货单</value>
+  </data>
+  <data name="button_Account_ISMM_PurchaseInvoice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account_ISMM_PurchaseInvoice.Text" xml:space="preserve">
+    <value>采购发票</value>
+  </data>
+  <data name="button_Account_ISMM_PurchaseOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account_ISMM_PurchaseOrder.Text" xml:space="preserve">
+    <value>采购订单</value>
+  </data>
+  <data name="button_Function_Account__PMM_ItemList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Function_Account__PMM_ItemList.Text" xml:space="preserve">
+    <value>物品清单</value>
+  </data>
+  <data name="button_Function_Account__PMM_SupplierList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Function_Account__PMM_SupplierList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 2</value>
+  </data>
+  <data name="button_Function_Account__PMM_SupplierList.Text" xml:space="preserve">
+    <value>供应商名单</value>
+  </data>
+  <data name="button_Account__AAM_AnalysisReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_AnalysisReport.Text" xml:space="preserve">
+    <value>分析报告</value>
+  </data>
+  <data name="button_Account__AAM_SalesOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_SalesOrder.Text" xml:space="preserve">
+    <value>销售订单</value>
+  </data>
+  <data name="button_Account__AAM_ItemList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_ItemList.Text" xml:space="preserve">
+    <value>物品清单</value>
+  </data>
+  <data name="button_Account__AAM_PurchaseOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_PurchaseOrder.Text" xml:space="preserve">
+    <value>采购订单</value>
+  </data>
+  <data name="button_Account__AAM_GoodsReceivedNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_GoodsReceivedNote.Text" xml:space="preserve">
+    <value>收货单</value>
+  </data>
+  <data name="button_Account__AAM_PurchaseInvoice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_PurchaseInvoice.Text" xml:space="preserve">
+    <value>采购发票</value>
+  </data>
+  <data name="button_Account__AAM_GoodsReturnedNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_GoodsReturnedNote.Text" xml:space="preserve">
+    <value>退货单</value>
+  </data>
+  <data name="button_Account__AAM_SupplierList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__AAM_SupplierList.Text" xml:space="preserve">
+    <value>供应商名单</value>
+  </data>
+  <data name="button_Account__RIM_GoodsReturnedRecord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Account__RIM_GoodsReturnedRecord.Text" xml:space="preserve">
+    <value>退货记录</value>
+  </data>
+  <data name="button_Function_Sales_AAM_AnalysisReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Function_Sales_AAM_AnalysisReport.Text" xml:space="preserve">
+    <value>分析报告</value>
+  </data>
+  <data name="button_Function_Sales_RIM_GoodsReturnedRecord.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Function_Sales_RIM_GoodsReturnedRecord.Text" xml:space="preserve">
+    <value>退货记录</value>
+  </data>
+  <data name="button_Sales_PMM_SalesItemList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Sales_PMM_SalesItemList.Text" xml:space="preserve">
+    <value>物品清单</value>
+  </data>
+  <data name="button__Sales_PMM_SupplierList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button__Sales_PMM_SupplierList.Text" xml:space="preserve">
+    <value>供应商名单</value>
+  </data>
+  <data name="button_Sales_RSMM_SalesItemList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Sales_RSMM_SalesItemList.Text" xml:space="preserve">
+    <value>物品清单</value>
+  </data>
+  <data name="button_Sales_RSMM_InventoryStorckLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Sales_RSMM_InventoryStorckLevel.Text" xml:space="preserve">
+    <value>库存水平</value>
+  </data>
+  <data name="button_Sales_RSMM_SalesStorckLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Sales_RSMM_SalesStorckLevel.Text" xml:space="preserve">
+    <value>零售库存水平</value>
+  </data>
+  <data name="button_Sales_RSMM_ReRestockRequest.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Sales_RSMM_ReRestockRequest.Text" xml:space="preserve">
+    <value>补货请求</value>
+  </data>
+  <data name="button_Sales_posMod_POS.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSalesOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSalesOrder.Text" xml:space="preserve">
+    <value>销售订单</value>
+  </data>
+  <data name="button_zh_Click.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_en_Click.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnUpdateAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnUpdateAccount.Text" xml:space="preserve">
+    <value>更新账户</value>
+  </data>
+  <data name="btnStaffList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnStaffList.Text" xml:space="preserve">
+    <value>员工管理</value>
+  </data>
+  <data name="button_Language.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDept.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDept.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="lblDept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 23</value>
+  </data>
+  <data name="lblDept.Text" xml:space="preserve">
+    <value>部门：</value>
+  </data>
+  <data name="lblPos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 23</value>
+  </data>
+  <data name="lblPos.Text" xml:space="preserve">
+    <value>职位:</value>
+  </data>
+  <data name="lblUsername.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 81</value>
+  </data>
+  <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 23</value>
+  </data>
+  <data name="lblUsername.Text" xml:space="preserve">
+    <value>用户名：</value>
+  </data>
+  <data name="lblUserId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblUserId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 111</value>
+  </data>
+  <data name="lblUserId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 39</value>
+  </data>
+  <data name="lblUserId.Text" xml:space="preserve">
+    <value>用户身份：</value>
+  </data>
+  <data name="Label_UserDepartment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_UserPosition.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_UserName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_UserID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_LogOut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_LogOut.Text" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+</root>
